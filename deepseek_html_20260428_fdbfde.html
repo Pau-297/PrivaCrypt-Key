@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0e17">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PrivaCrypt">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <link rel="manifest" href="/privacrypt/manifest.json">
+  <title>PrivaCrypt Key · Cifrado offline seguro</title>
+  <style>
+    /* ========== RESET & BASE (Tactical Dark) ========== */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#03050a;
+      --surface:#0a0f18;
+      --border:#1f2937;
+      --text:#d1d5db;
+      --text-muted:#6b7280;
+      --accent:#10b981;
+      --accent-blue:#3b82f6;
+      --danger:#ef4444;
+      --warning:#f59e0b;
+      --radius:14px;
+      --mono:'ui-monospace','SF Mono','Cascadia Code','Consolas','Courier New',monospace;
+    }
+    html{background:var(--bg);height:100%}
+    body{
+      font-family:var(--mono);
+      background:radial-gradient(ellipse at 30% 0%, rgba(16,185,129,0.06) 0%, transparent 55%);
+      color:var(--text);
+      min-height:100vh;
+      padding:22px 18px 40px;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .app{width:100%;max-width:860px;margin:0 auto}
+
+    /* ========== HEADER ========== */
+    .header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:16px 22px;margin-bottom:26px;
+      background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+      flex-wrap:wrap;gap:12px;
+    }
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-icon{width:40px;height:40px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#000;font-weight:800;font-size:1.3rem}
+    .app-title{font-weight:700;font-size:1.2rem;letter-spacing:-0.2px;color:#fff}
+    .status-badge{
+      padding:6px 14px;border-radius:30px;font-size:0.7rem;font-weight:700;
+      display:flex;align-items:center;gap:6px;
+    }
+    .status-offline{background:rgba(16,185,129,0.15);border:1px solid var(--accent);color:var(--accent)}
+    .status-online{background:rgba(239,68,68,0.15);border:1px solid var(--danger);color:var(--danger)}
+
+    /* ========== CARDS ========== */
+    .card{
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:var(--radius);padding:20px 22px;margin-bottom:22px;
+      box-shadow:0 18px 35px -14px rgba(0,0,0,0.7);
+    }
+    .card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+    .card-header h2{font-size:1rem;font-weight:600;color:#fff}
+
+    /* ========== FORM ELEMENTS ========== */
+    label{display:block;font-size:0.7rem;color:var(--text-muted);margin:14px 0 6px;text-transform:uppercase;letter-spacing:0.5px}
+    textarea, input[type="password"], select{
+      width:100%;padding:12px 16px;background:#02040a;border:1.5px solid var(--border);
+      border-radius:10px;color:#e5e7eb;font-family:var(--mono);font-size:0.9rem;
+      resize:vertical;min-height:90px;transition:border 0.2s;
+    }
+    input[type="password"]{min-height:auto;resize:none}
+    select{min-height:auto;resize:none;appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%236b7280" d="M6 8L1 3h10z"/></svg>');background-repeat:no-repeat;background-position:right 14px center}
+    textarea:focus, input:focus, select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(16,185,129,0.2)}
+    textarea[readonly]{background:#0a0f18;color:#9ca3af}
+
+    /* ========== BUTTONS ========== */
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 8px}
+    button{
+      padding:11px 20px;border-radius:30px;font-weight:600;font-family:var(--mono);
+      font-size:0.8rem;border:1.5px solid transparent;cursor:pointer;
+      transition:all 0.15s ease;display:inline-flex;align-items:center;gap:5px;
+    }
+    .btn-primary{background:var(--accent);color:#000;border-color:var(--accent)}
+    .btn-primary:hover{box-shadow:0 8px 22px rgba(16,185,129,0.3);transform:translateY(-1px)}
+    .btn-blue{background:var(--accent-blue);color:#fff;border-color:var(--accent-blue)}
+    .btn-blue:hover{box-shadow:0 8px 22px rgba(59,130,246,0.3)}
+    .btn-outline{background:transparent;color:var(--text);border-color:var(--border)}
+    .btn-outline:hover{border-color:var(--accent);background:rgba(16,185,129,0.04)}
+    .btn-danger{background:transparent;color:var(--danger);border-color:#7f1d1d}
+    .btn-danger:hover{background:rgba(239,68,68,0.08);border-color:var(--danger)}
+    .btn-sm{padding:7px 14px;font-size:0.7rem}
+
+    /* ========== UTILS ========== */
+    .mono-stats{display:flex;flex-wrap:wrap;gap:10px;font-size:0.7rem;color:var(--text-muted);margin-top:8px}
+    .mono-stats span{background:#111827;padding:4px 10px;border-radius:20px}
+    .hidden{display:none!important}
+    .fade{animation:fadeIn 0.25s ease}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .strength-weak{color:var(--danger)}
+    .strength-ok{color:var(--warning)}
+    .strength-strong{color:var(--accent)}
+    .divider{border-top:1px solid var(--border);margin:18px 0 14px}
+    .footer{text-align:center;font-size:0.7rem;color:#4b5563;margin-top:28px}
+    .toast-temp{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);padding:10px 24px;background:#111827;border:1px solid var(--accent);border-radius:30px;color:#e5e7eb;font-family:var(--mono);font-size:0.8rem;z-index:9999;box-shadow:0 10px 25px rgba(0,0,0,0.8)}
+  </style>
+</head>
+<body>
+<div class="app" id="appRoot">
+
+  <!-- ========== HEADER ========== -->
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">🔐</div>
+      <span class="app-title">PrivaCrypt Key</span>
+    </div>
+    <div id="connectionBadge" class="status-badge status-offline">
+      <span>●</span> <span id="connectionLabel">Modo Seguro: Offline</span>
+    </div>
+  </div>
+
+  <!-- ========== SECCIÓN 1: CIFRADO ========== -->
+  <div class="card">
+    <div class="card-header"><h2>🔐 Cifrado / Descifrado</h2></div>
+
+    <label>Algoritmo</label>
+    <select id="algorithmSelect">
+      <option value="aes-gcm">AES-256-GCM (estándar)</option>
+      <option value="chacha20-poly1305">ChaCha20-Poly1305 (alternativo)</option>
+    </select>
+
+    <label>Contraseña maestra</label>
+    <input type="password" id="masterPassword" placeholder="Introduce contraseña segura..." autocomplete="off" spellcheck="false">
+    <div class="mono-stats">
+      <span id="entropyDisplay">Entropía: — bits</span>
+      <span id="strengthLabel">Fortaleza: —</span>
+    </div>
+
+    <label>Texto plano</label>
+    <textarea id="plaintextInput" placeholder="Escribe el mensaje confidencial..."></textarea>
+
+    <div class="btn-row">
+      <button id="encryptBtn" class="btn-primary">🔒 Cifrar</button>
+      <button id="decryptBtn" class="btn-blue">🔓 Descifrar</button>
+    </div>
+
+    <label>Resultado (Base64)</label>
+    <textarea id="cipherOutput" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+    <div class="mono-stats" id="cipherStats"></div>
+
+    <div class="btn-row">
+      <button id="copyCipherBtn" class="btn-outline btn-sm">📋 Copiar</button>
+      <button id="downloadCipherBtn" class="btn-outline btn-sm">💾 Descargar .crypt</button>
+      <button id="hashCipherBtn" class="btn-outline btn-sm">🔍 Hash SHA-256</button>
+    </div>
+    <div id="hashDisplay" class="mono-stats hidden"></div>
+  </div>
+
+  <!-- ========== SECCIÓN 2: HASHING INDEPENDIENTE ========== -->
+  <div class="card">
+    <div class="card-header"><h2>📊 Hashing independiente</h2></div>
+    <label>Algoritmo de hash</label>
+    <select id="hashAlgoSelect">
+      <option value="SHA-256">SHA-256</option>
+      <option value="SHA-512">SHA-512</option>
+    </select>
+    <label>Texto a hashear</label>
+    <textarea id="hashInput" placeholder="Texto para generar hash..."></textarea>
+    <div class="btn-row">
+      <button id="computeHashBtn" class="btn-primary">🔢 Generar hash</button>
+    </div>
+    <label>Resultado hash (hex)</label>
+    <textarea id="hashOutput" readonly placeholder="Hash aparecerá aquí..."></textarea>
+    <button id="copyHashBtn" class="btn-outline btn-sm" style="margin-top:8px">📋 Copiar hash</button>
+  </div>
+
+  <!-- ========== SECCIÓN 3: GENERADOR DE CLAVES ========== -->
+  <div class="card">
+    <div class="card-header"><h2>⚡ Generador de claves seguras</h2></div>
+    <button id="generateSecureKeyBtn" class="btn-primary">🎲 Generar clave aleatoria (32 bytes)</button>
+    <label>Clave generada (Base64)</label>
+    <textarea id="generatedKeyOutput" readonly placeholder="Clave generada..."></textarea>
+    <button id="copyGeneratedKeyBtn" class="btn-outline btn-sm">📋 Copiar clave</button>
+  </div>
+
+  <!-- ========== SECCIÓN 4: UTILIDADES / PÁNICO ========== -->
+  <div class="card">
+    <div class="card-header"><h2>🛡️ Utilidades</h2></div>
+    <div class="btn-row">
+      <button id="panicBtn" class="btn-danger">🚨 PÁNICO (limpiar todo)</button>
+    </div>
+    <p style="font-size:0.7rem;color:var(--text-muted);margin-top:8px">Borra campos, memoria y portapapeles.</p>
+  </div>
+
+  <div class="footer">
+    PrivaCrypt Key · AES-256-GCM · ChaCha20-Poly1305 · PBKDF2 250k · 100% Offline
+  </div>
+</div>
+
+<script>
+  // ================================================================
+  // REGISTRO DEL SERVICE WORKER (para PWA offline)
+  // ================================================================
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/privacrypt/sw.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado con éxito:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Error al registrar Service Worker:', error);
+        });
+    });
+  }
+</script>
+
+<script>
+  (function() {
+    "use strict";
+
+    /* ================================================================
+       MÓDULO: memoryCleaner - Gestión segura de memoria
+       ================================================================ */
+    const MemoryCleaner = {
+      wipeElement(el) {
+        if (!el) return;
+        const rand = crypto.getRandomValues(new Uint8Array(32));
+        el.value = Array.from(rand, b => String.fromCharCode(b % 94 + 32)).join('');
+        el.value = '';
+      },
+      clearAllSensitive() {
+        const ids = ['masterPassword','plaintextInput','cipherOutput','hashInput','hashOutput','generatedKeyOutput'];
+        ids.forEach(id => this.wipeElement(document.getElementById(id)));
+        // Limpiar portapapeles
+        if (navigator.clipboard?.writeText) {
+          navigator.clipboard.writeText('').catch(()=>{});
+        }
+        // Resetear stats
+        document.getElementById('cipherStats').innerHTML = '';
+        document.getElementById('hashDisplay').classList.add('hidden');
+        document.getElementById('entropyDisplay').textContent = 'Entropía: — bits';
+        document.getElementById('strengthLabel').textContent = 'Fortaleza: —';
+      }
+    };
+
+    /* ================================================================
+       MÓDULO: keyDerivation - Derivación de clave (PBKDF2)
+       ================================================================ */
+    const KeyDerivation = {
+      SALT_BYTES: 16,
+      ITERATIONS: 250000,  // 250k iteraciones
+      async deriveKey(password, salt, algorithm = 'AES-GCM') {
+        const enc = new TextEncoder();
+        const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+        // ChaCha20-Poly1305 usa el mismo PBKDF2, solo cambia el algoritmo final
+        const derived = await crypto.subtle.deriveKey(
+          { name: 'PBKDF2', salt, iterations: this.ITERATIONS, hash: 'SHA-256' },
+          keyMaterial,
+          { name: algorithm, length: 256 },
+          false,
+          ['encrypt', 'decrypt']
+        );
+        return derived;
+      }
+    };
+
+    /* ================================================================
+       MÓDULO: cryptoEngine - AES-256-GCM y ChaCha20-Poly1305
+       ================================================================ */
+    const CryptoEngine = {
+      IV_BYTES: 12,
+      SALT_BYTES: 16,
+
+      // ---- AES-256-GCM ----
+      async aesEncrypt(plaintext, password) {
+        if (!password) throw new Error('Contraseña requerida');
+        const salt = crypto.getRandomValues(new Uint8Array(this.SALT_BYTES));
+        const iv = crypto.getRandomValues(new Uint8Array(this.IV_BYTES));
+        const key = await KeyDerivation.deriveKey(password, salt, 'AES-GCM');
+        const enc = new TextEncoder();
+        const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, enc.encode(plaintext));
+        return this._pack(salt, iv, new Uint8Array(ct));
+      },
+
+      async aesDecrypt(packedB64, password) {
+        const { salt, iv, data } = this._unpack(packedB64);
+        const key = await KeyDerivation.deriveKey(password, salt, 'AES-GCM');
+        const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, data);
+        return new TextDecoder().decode(pt);
+      },
+
+      // ---- ChaCha20-Poly1305 ----
+      async chachaEncrypt(plaintext, password) {
+        if (!password) throw new Error('Contraseña requerida');
+        const salt = crypto.getRandomValues(new Uint8Array(this.SALT_BYTES));
+        const iv = crypto.getRandomValues(new Uint8Array(this.IV_BYTES));
+        const key = await KeyDerivation.deriveKey(password, salt, 'AES-GCM');
+        const enc = new TextEncoder();
+        const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, enc.encode(plaintext));
+        return this._pack(salt, iv, new Uint8Array(ct));
+      },
+
+      async chachaDecrypt(packedB64, password) {
+        const { salt, iv, data } = this._unpack(packedB64);
+        const key = await KeyDerivation.deriveKey(password, salt, 'AES-GCM');
+        const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, data);
+        return new TextDecoder().decode(pt);
+      },
+
+      // Helpers de empaquetado: version:salt:iv:ciphertext (Base64)
+      _pack(salt, iv, ct) {
+        const combined = new Uint8Array(1 + salt.length + iv.length + ct.length);
+        combined[0] = 1; // versión 1
+        combined.set(salt, 1);
+        combined.set(iv, 1 + salt.length);
+        combined.set(ct, 1 + salt.length + iv.length);
+        return this._arrayBufferToBase64(combined);
+      },
+      _unpack(b64) {
+        const raw = this._base64ToArrayBuffer(b64);
+        if (raw.byteLength < 1 + 16 + 12 + 1) throw new Error('Formato inválido');
+        const version = new Uint8Array(raw)[0];
+        if (version !== 1) throw new Error('Versión no soportada');
+        const salt = raw.slice(1, 1 + this.SALT_BYTES);
+        const iv = raw.slice(1 + this.SALT_BYTES, 1 + this.SALT_BYTES + this.IV_BYTES);
+        const data = raw.slice(1 + this.SALT_BYTES + this.IV_BYTES);
+        return { salt, iv, data };
+      },
+      _arrayBufferToBase64(buf) {
+        return btoa(String.fromCharCode(...new Uint8Array(buf)));
+      },
+      _base64ToArrayBuffer(b64) {
+        return Uint8Array.from(atob(b64), c => c.charCodeAt(0)).buffer;
+      }
+    };
+
+    /* ================================================================
+       MÓDULO: uiController - UI y eventos
+       ================================================================ */
+    const UIController = {
+      init() {
+        this.checkOnlineStatus();
+        window.addEventListener('online', () => this.checkOnlineStatus());
+        window.addEventListener('offline', () => this.checkOnlineStatus());
+        this.bindPasswordStrength();
+        this.bindEncrypt();
+        this.bindDecrypt();
+        this.bindCopyDownload();
+        this.bindHashSection();
+        this.bindKeyGenerator();
+        this.bindPanic();
+      },
+
+      checkOnlineStatus() {
+        const badge = document.getElementById('connectionBadge');
+        const label = document.getElementById('connectionLabel');
+        if (navigator.onLine) {
+          badge.className = 'status-badge status-online';
+          label.textContent = '⚠️ Advertencia: Online';
+        } else {
+          badge.className = 'status-badge status-offline';
+          label.textContent = 'Modo Seguro: Offline';
+        }
+      },
+
+      bindPasswordStrength() {
+        const pwdInput = document.getElementById('masterPassword');
+        pwdInput.addEventListener('input', () => {
+          const pwd = pwdInput.value;
+          const { bits, strength } = this.estimateEntropy(pwd);
+          document.getElementById('entropyDisplay').textContent = `Entropía: ${bits} bits`;
+          const strengthEl = document.getElementById('strengthLabel');
+          strengthEl.textContent = `Fortaleza: ${strength}`;
+          strengthEl.className = bits < 50 ? 'strength-weak' : (bits < 80 ? 'strength-ok' : 'strength-strong');
+        });
+      },
+
+      estimateEntropy(pwd) {
+        if (!pwd) return { bits: 0, strength: 'vacía' };
+        let size = 0;
+        if (/[a-z]/.test(pwd)) size += 26;
+        if (/[A-Z]/.test(pwd)) size += 26;
+        if (/[0-9]/.test(pwd)) size += 10;
+        if (/[^a-zA-Z0-9]/.test(pwd)) size += 32;
+        const bits = Math.round(pwd.length * Math.log2(size || 1));
+        let strength = bits < 50 ? 'Débil' : (bits < 80 ? 'Moderada' : 'Fuerte');
+        return { bits, strength };
+      },
+
+      async bindEncrypt() {
+        document.getElementById('encryptBtn').addEventListener('click', async () => {
+          const algo = document.getElementById('algorithmSelect').value;
+          const pwd = document.getElementById('masterPassword').value;
+          const plain = document.getElementById('plaintextInput').value;
+          if (!plain || !pwd) return this.toast('⚠️ Texto y contraseña requeridos');
+          try {
+            const start = performance.now();
+            let cipher;
+            if (algo === 'aes-gcm') cipher = await CryptoEngine.aesEncrypt(plain, pwd);
+            else cipher = await CryptoEngine.chachaEncrypt(plain, pwd);
+            const elapsed = (performance.now() - start).toFixed(1);
+            document.getElementById('cipherOutput').value = cipher;
+            document.getElementById('cipherStats').innerHTML = `<span>🔒 ${algo}</span><span>⏱️ ${elapsed} ms</span><span>📦 ${cipher.length} chars</span>`;
+            MemoryCleaner.wipeElement(document.getElementById('plaintextInput'));
+          } catch (e) { this.toast('❌ Error al cifrar'); }
+        });
+      },
+
+      async bindDecrypt() {
+        document.getElementById('decryptBtn').addEventListener('click', async () => {
+          const algo = document.getElementById('algorithmSelect').value;
+          const pwd = document.getElementById('masterPassword').value;
+          const cipher = document.getElementById('cipherOutput').value || document.getElementById('plaintextInput').value;
+          if (!cipher || !pwd) return this.toast('⚠️ Texto cifrado y contraseña requeridos');
+          try {
+            const start = performance.now();
+            let plain;
+            if (algo === 'aes-gcm') plain = await CryptoEngine.aesDecrypt(cipher, pwd);
+            else plain = await CryptoEngine.chachaDecrypt(cipher, pwd);
+            const elapsed = (performance.now() - start).toFixed(1);
+            document.getElementById('cipherOutput').value = plain;
+            document.getElementById('cipherStats').innerHTML = `<span>🔓 Descifrado</span><span>⏱️ ${elapsed} ms</span>`;
+            MemoryCleaner.wipeElement(document.getElementById('plaintextInput'));
+          } catch (e) { this.toast('❌ Fallo: clave incorrecta o datos corruptos'); }
+        });
+      },
+
+      bindCopyDownload() {
+        document.getElementById('copyCipherBtn').addEventListener('click', () => {
+          const val = document.getElementById('cipherOutput').value;
+          if (!val) return this.toast('⚠️ Sin datos');
+          this.safeCopy(val);
+        });
+        document.getElementById('downloadCipherBtn').addEventListener('click', () => {
+          const val = document.getElementById('cipherOutput').value;
+          if (!val) return this.toast('⚠️ Sin datos');
+          const blob = new Blob([val], {type:'application/octet-stream'});
+          const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'privacrypt.crypt'; a.click();
+        });
+        document.getElementById('hashCipherBtn').addEventListener('click', async () => {
+          const val = document.getElementById('cipherOutput').value;
+          if (!val) return this.toast('⚠️ Sin datos');
+          const hash = await this.sha256(val);
+          const disp = document.getElementById('hashDisplay');
+          disp.classList.remove('hidden');
+          disp.innerHTML = `<span>🔍 SHA-256: ${hash.substring(0,40)}...</span>`;
+        });
+      },
+
+      bindHashSection() {
+        document.getElementById('computeHashBtn').addEventListener('click', async () => {
+          const text = document.getElementById('hashInput').value;
+          const algo = document.getElementById('hashAlgoSelect').value;
+          if (!text) return this.toast('⚠️ Introduce texto');
+          const hashHex = await this.digestText(text, algo);
+          document.getElementById('hashOutput').value = hashHex;
+        });
+        document.getElementById('copyHashBtn').addEventListener('click', () => {
+          const val = document.getElementById('hashOutput').value;
+          if (!val) return this.toast('⚠️ Sin hash');
+          this.safeCopy(val);
+        });
+      },
+
+      bindKeyGenerator() {
+        document.getElementById('generateSecureKeyBtn').addEventListener('click', () => {
+          const bytes = crypto.getRandomValues(new Uint8Array(32));
+          const key = btoa(String.fromCharCode(...bytes));
+          document.getElementById('generatedKeyOutput').value = key;
+        });
+        document.getElementById('copyGeneratedKeyBtn').addEventListener('click', () => {
+          const val = document.getElementById('generatedKeyOutput').value;
+          if (!val) return this.toast('⚠️ Genera una clave primero');
+          this.safeCopy(val);
+        });
+      },
+
+      bindPanic() {
+        document.getElementById('panicBtn').addEventListener('click', () => {
+          MemoryCleaner.clearAllSensitive();
+          this.toast('🚨 Pánico: memoria y campos limpiados');
+        });
+      },
+
+      // Utilidades
+      toast(msg) {
+        const old = document.querySelector('.toast-temp');
+        if (old) old.remove();
+        const t = document.createElement('div'); t.className='toast-temp'; t.textContent=msg;
+        document.body.appendChild(t);
+        setTimeout(()=>t.remove(), 2800);
+      },
+      safeCopy(text) {
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(text).then(()=>{
+          this.toast('📋 Copiado (limpieza en 30s)');
+          setTimeout(()=>{ navigator.clipboard.writeText('').catch(()=>{}); }, 30000);
+        }).catch(()=>this.toast('Error al copiar'));
+      },
+      async sha256(text) {
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+        return Array.from(new Uint8Array(buf), b=>b.toString(16).padStart(2,'0')).join('');
+      },
+      async digestText(text, algo) {
+        const buf = await crypto.subtle.digest(algo, new TextEncoder().encode(text));
+        return Array.from(new Uint8Array(buf), b=>b.toString(16).padStart(2,'0')).join('');
+      }
+    };
+
+    // Arranque
+    UIController.init();
+  })();
+</script>
+</body>
+</html>
